@@ -85,9 +85,11 @@ print("-----------------------")
 output_path = os.path.join("Resources", "analysis.csv")
 with open(output_path, 'w') as csvfile:
     csvwriter = csv.writer(csvfile, delimiter=',')
+    csvwriter.writerow(["Election Results"])
     csvwriter.writerow(["Total Votes: ", (total_votes)])
     csvwriter.writerow(["Khan: ", (khan_percent_votes),"% ", "(", (khan_votes_won), ")"])
     csvwriter.writerow(["Correy ", (correy_percent_votes),"% ", "(", (correy_votes_won), ")"])
     csvwriter.writerow(["Li: ", (li_percent_votes),"% ", "(", (li_votes_won), ")"])
     csvwriter.writerow(["O'Tooley: ", (otooley_percent_votes),"% ", "(", (otooley_votes_won), ")"])
     csvwriter.writerow(["Winner: ", (winner)])
+
